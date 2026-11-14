@@ -2,15 +2,21 @@
 # Group config — EDIT ME (one per group). Values here override
 # the track defaults loaded from `track_config`.
 # ============================================================
-group_id: G00                     # e.g. G07
-owner: "TODO: tên người ký duyệt (role)"   # mandatory for every Decision
-track_config: tracks/t02.yaml     # pick your challenge: tracks/t01.yaml ... tracks/t14.yaml
-track: t02                        # must match track_config
-input: fixtures/t02_raw_qc        # or data/real/... if your instructor provided a real pack
+group_id: G06                     # e.g. G07
+owner: "Tran Quang Vinh (2A202603054 - Data Governance Lead)"   # mandatory for every Decision
+track_config: tracks/t06.yaml     # pick your challenge: tracks/t01.yaml ... tracks/t14.yaml
+track: t06                        # must match track_config
+input: fixtures/t06_release_gate  # or data/real/... if your instructor provided a real pack
 output: out/
 seed: 42
 offline: true                     # demo/eval must not touch the network
 strict_provenance: true           # fail if manifest.csv hashes do not match
 
 # Track params (merged over track_config.params). Freeze before evaluation.
-params: {}
+params:
+  parent_release: releases/v1.0
+  budget: 10
+  bbox_shift_px_tol: 2.0
+  bbox_shift_min_count: 10
+  dropped_frame_min_count: 1
+  reviewed_queue_path: reports/review_queue.csv

@@ -1,6 +1,6 @@
 # Day06 Data Lab — common commands.  Usage: make <target> TRACK=t02
 PY ?= .venv/bin/python
-TRACK ?= t02
+TRACK ?= t06
 OUT ?= out
 PRED = $(shell $(PY) -c "from src.metrics.tracks import get_track;print(get_track('$(TRACK)').pred_file)")
 
