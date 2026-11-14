@@ -36,6 +36,10 @@ def _items(ctx: RunContext) -> tuple[pd.DataFrame, str]:
 
 
 def run(ctx: RunContext) -> None:
+    if ctx.track == "t06":
+        from .. import baseline as t06_baseline
+        t06_baseline.run(ctx)
+        return
     spec = get_track(ctx.track)
     items, id_col = _items(ctx)                                        # 01 load
     items = items.assign(score=ctx.rng.random(len(items)), reason="random")  # 02 process (random!)
