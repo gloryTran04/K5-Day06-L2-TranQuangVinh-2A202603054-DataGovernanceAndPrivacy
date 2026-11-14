@@ -1,0 +1,5 @@
+slice,block_rate
+class_swap,1.0
+clean,0.0
+dropped_frames,1.0
+id_collision,1.0

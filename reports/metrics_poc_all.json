@@ -1,0 +1,103 @@
+{
+  "run_name": "poc",
+  "track": "t06",
+  "created_at": "2026-11-14T09:58:41+00:00",
+  "git_sha": "b0ce8bf",
+  "seed": 42,
+  "n_items": 20,
+  "runtime_seconds": 0.7936,
+  "runtime_per_100_items_s": 3.968,
+  "machine": {
+    "python": "3.11.6",
+    "platform": "macOS-14.5-x86_64-i386-64bit",
+    "processor": "i386"
+  },
+  "config": {
+    "split": "all"
+  },
+  "metrics": [
+    {
+      "name": "Silent-defect Detection F1",
+      "value": 1.0,
+      "direction": "higher",
+      "unit": "F1, unit = release, positive = defective & blocked",
+      "numerator": null,
+      "denominator": null,
+      "n": 20,
+      "slice": "all",
+      "primary": true,
+      "notes": "",
+      "extra": {}
+    },
+    {
+      "name": "Defect recall",
+      "value": 1.0,
+      "direction": "higher",
+      "unit": "defective releases blocked / defective",
+      "numerator": 10,
+      "denominator": 10,
+      "n": null,
+      "slice": "all",
+      "primary": false,
+      "notes": "",
+      "extra": {}
+    },
+    {
+      "name": "False-block rate",
+      "value": 0.0,
+      "direction": "lower",
+      "unit": "clean releases blocked / clean",
+      "numerator": 0,
+      "denominator": 10,
+      "n": null,
+      "slice": "all",
+      "primary": false,
+      "notes": "",
+      "extra": {}
+    },
+    {
+      "name": "Root-cause accuracy",
+      "value": 1.0,
+      "direction": "higher",
+      "unit": "correct root cause / defective blocked",
+      "numerator": 10,
+      "denominator": 10,
+      "n": null,
+      "slice": "all",
+      "primary": false,
+      "notes": "",
+      "extra": {}
+    }
+  ],
+  "extra": {
+    "gt": "reports/self_audit_gt_t06.csv",
+    "pred": "out/poc/release_decisions.csv",
+    "notes": [],
+    "slices": [
+      {
+        "slice": "bbox_shift",
+        "block_rate": 1.0
+      },
+      {
+        "slice": "class_swap",
+        "block_rate": 1.0
+      },
+      {
+        "slice": "clean",
+        "block_rate": 0.0
+      },
+      {
+        "slice": "dropped_frames",
+        "block_rate": 1.0
+      },
+      {
+        "slice": "id_collision",
+        "block_rate": 1.0
+      },
+      {
+        "slice": "stale_map",
+        "block_rate": 1.0
+      }
+    ]
+  }
+}

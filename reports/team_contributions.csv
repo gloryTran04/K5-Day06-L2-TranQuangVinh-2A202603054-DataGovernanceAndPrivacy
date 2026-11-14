@@ -1,6 +1,6 @@
 member,git_author_name,git_email,role,modules_files,commit_shas,evidence_note,presenter
-Member 1,,,Lead / Integrator,src/main.py; configs/,,,
-Member 2,,,Data & fixtures,fixtures/; tools/,,,
-Member 3,,,Core algorithm,src/pipeline.py,,,
-Member 4,,,QA / metric,tests/; reports/metrics_*.json,,,
-Member 5,,,Human review + report,reports/group_report.md; demo/,,,
+Tran Quang Vinh (2A202603054),gloryTran04,gloryTran04@users.noreply.github.com,Lead / Integrator,src/main.py; configs/lab.yaml; Makefile,HEAD,Configured Track T06 frozen parameters and reproducible CLI entrypoint,yes
+Tran Quang Vinh (2A202603054),gloryTran04,gloryTran04@users.noreply.github.com,Data & fixtures,fixtures/t06_release_gate/; reports/self_audit_gt_t06.csv,HEAD,Verified SHA-256 manifests and COCO-YOLO round-trip invariants across 20 releases,yes
+Tran Quang Vinh (2A202603054),gloryTran04,gloryTran04@users.noreply.github.com,Core algorithm,src/pipeline.py; src/baseline.py,HEAD,Implemented 6 semantic invariants + Croissant 1.1 provenance metadata + baseline gate,yes
+Tran Quang Vinh (2A202603054),gloryTran04,gloryTran04@users.noreply.github.com,QA / metric,tests/test_t06_pipeline.py; reports/metrics_*.json; reports/table1_baseline_vs_poc.md,HEAD,Wrote 6 unit/shock tests (52 passed) and evaluated dev/eval/all splits with bootstrap CI,yes
+Tran Quang Vinh (2A202603054),gloryTran04,gloryTran04@users.noreply.github.com,Human review + report,reports/review_queue.csv; reports/group_report.md; demo/,HEAD,Reviewed top-10 suspicious releases (2 REWORK overrides + 8 HOLD approvals) and authored report/demo,yes
